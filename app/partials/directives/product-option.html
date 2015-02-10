@@ -1,0 +1,31 @@
+<!-- Drop_down -->
+<div ng-if="option.type == 'drop_down'" class="btn-group st-product-size">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        <span class="btn-label">{{(selectedLabel == '')?option.label:selectedLabel}}</span> 
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li ng-repeat="value in option.values" ng-click="_click(value)">
+            <a href="javascript:void(0);">{{value.label}}</a>
+        </li>
+    </ul>
+</div>
+
+<!-- Checkbox -->
+<label ng-if="option.type == 'checkbox'">{{option.label}}</label>
+<div ng-if="option.type == 'checkbox'" class="input-group">
+    <span ng-repeat="value in option.values" ng-click="_click(value)" class="input-group-addon">
+        <input id="optionvalue_{{value.value}}" 
+               type="checkbox" />&nbsp;<label for="optionvalue_{{value.value}}">{{value.label}}</label>
+    </span>
+</div>
+
+<!-- Radio -->
+<label ng-if="option.type == 'radio'">{{option.label}}</label>
+<div ng-if="option.type == 'radio'" class="input-group">
+    <span ng-repeat="value in option.values" ng-click="_click(value)" class="input-group-addon">
+        <input id="optionvalue_{{value.value}}" 
+               name="option_{{option.id}}" 
+               type="radio" />&nbsp;<label for="optionvalue_{{value.value}}">{{value.label}}</label>
+    </span>
+</div>

@@ -1,0 +1,46 @@
+<div role="complementary" ng-mouseenter="onMouseEnter($event)" ng-mouseleave="onMouseLeft($event)" ng-mousemove="onMouseMove($event)">
+
+    <div class="st_thumbs_title" ng-show="showTopBar" >
+        <span> {{topBarTitle}} </span>
+    </div>
+    <div class="album" >
+        <div class="st_wrapper st_thumbs_wrapper clearfix anim-thumb" ng-show="showThumbnails" >
+
+            <div class="st_thumbs">
+
+                <a ng-repeat="thumbItem in datasource" 
+                   ng-click="onThumbnailClick(thumbItem);" 
+                   href="{{getHREFValue(thumbItem)}}" 
+                   id="{{makeItemFQId(thumbItem)}}" >
+
+                    <img ng-src="{{thumbItem.thumb_url}}" />
+
+                </a>
+
+            </div>
+        </div>
+
+        <a href="javascript:void(0)" 
+           ng-show="showNavCtrls" 
+           class="nav_left" 
+           ng-mouseenter="onMouseEnter($event)" 
+           ng-mousedown="onMouseDownOnNavLeft($event)" 
+           ng-mouseup="onMouseUpOnLeftNav($event)" 
+           ng-mouseleave="onMouseLeftLeftNav($event)">
+
+            <span class="st-thumb-nav-bg"></span>
+
+        </a>
+
+        <a href="javascript:void(0)" 
+           ng-show="showNavCtrls" 
+           class="nav_right" 
+           ng-mousedown="onMouseDownOnNavRight($event)" 
+           ng-mouseup="onMouseUpOnRightNav($event)" 
+           ng-mouseleave="onMouseLeftRightNav($event)">
+
+            <span class="st-thumb-nav-bg"></span>
+
+        </a>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+.modal-ajax-loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+.modal-ajax-loader .overlay {
+    background: #000;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    z-index: 1;
+}
+
+.modal-ajax-loader .loader {
+    background: url('../img/ajax-loader.gif') no-repeat center center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Maxxsol_ExtendAPI>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Maxxsol_ExtendAPI>
+    </modules>
+</config>

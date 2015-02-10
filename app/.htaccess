@@ -1,0 +1,19 @@
+<IfModule pagespeed_module>
+ModPagespeed off
+</IfModule>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+</IfModule>
+
+<IfModule mod_expires.c>
+
+<FilesMatch "\.(htm|html)$">
+  ExpiresActive On
+  ExpiresDefault A1
+  Header append Cache-Control must-revalidate
+</FilesMatch>
+
+</IfModule>

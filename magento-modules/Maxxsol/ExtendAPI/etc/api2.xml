@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+    <api2>
+        <resource_groups>
+            <extendapi translate="title" module="Maxxsol_ExtendAPI">
+                <title>Maxxsol API</title>
+                <sort_order>10</sort_order>
+            </extendapi>
+        </resource_groups>
+        <resources>
+            <product-options translate="title" module="Maxxsol_ExtendAPI">
+                <group>catalog</group>
+                <model>maxxsol_extendapi_models/catalog_product_options</model>
+                <title>Product Options</title>
+                <sort_order>9</sort_order>
+                <info translate="title" module="Maxxsol_ExtendAPI">
+                    <title>Retrieve product options</title>
+                </info>
+                <privileges>
+                    <guest>
+                        <retrieve>1</retrieve>
+                        <!--  <create>1</create>
+                        <update>1</update>
+                        <delete>1</delete>  --> 
+                    </guest>
+                </privileges>
+                <attributes>
+                    <label>Title</label>
+                    <id>Id</id>
+                    <name>Form element name</name>
+                    <type>Type</type>
+                    <price>Price</price>
+                    <price_type>Price Type</price_type>
+                    <is_super>Is Super Attribute?</is_super>
+                    <values>Values</values>
+                </attributes>
+                <routes>
+                    <product-options-route>
+                        <route>/products/:prod_id/options</route>
+                        <action_type>collection</action_type>
+                    </product-options-route>
+                </routes>
+                <versions>1</versions>
+            </product-options>
+            <product-prev-next translate="title" module="Maxxsol_ExtendAPI">
+                <group>catalog</group>
+                <model>maxxsol_extendapi_models/catalog_product_prevnext</model>
+                <title>Product PrevNext</title>
+                <sort_order>9</sort_order>
+                <info translate="title" module="Maxxsol_ExtendAPI">
+                    <title>Retrieve product previous and next products</title>
+                </info>
+                <privileges>
+                    <guest>
+                        <retrieve>1</retrieve>
+                        <!--  <create>1</create>
+                        <update>1</update>
+                        <delete>1</delete>  --> 
+                    </guest>
+                </privileges>
+                <attributes>
+                    <entity_id>Product Id</entity_id>
+                    <name>Product Name</name>
+                    <title>Product Title</title>
+                    <desc>Product Description</desc>
+                    <regular_price>Product Regular Price</regular_price>
+                    <final_price>Product Final Price</final_price>
+                    <slug>Product URL Key</slug>
+                    <rank>Product Rank</rank>
+                    <thumb_url>Product Thumb URL</thumb_url>
+                    <image_url>Product Image URL</image_url>
+                    <product_url>Product URL</product_url>
+                </attributes>
+                <routes>
+                    <prod-prev-next-route>
+                        <route>/products/prev_next/:cat_id/:prod_id/:rank</route>
+                        <action_type>collection</action_type>
+                    </prod-prev-next-route>
+                </routes>
+                <versions>1</versions>
+            </product-prev-next>
+            <product_ids translate="title" module="Maxxsol_ExtendAPI">
+                <group>catalog</group>
+                <model>maxxsol_extendapi_models/catalog_product_productids</model>
+                <title>Product Ids</title>
+                <sort_order>10</sort_order>
+                <privileges>
+                    <guest>
+                        <retrieve>1</retrieve>
+                        <!--  <create>1</create>
+                        <update>1</update>
+                        <delete>1</delete>  --> 
+                    </guest>
+                </privileges>
+                <attributes>
+                    <entity_id>Product Id</entity_id>
+                    <name>Product Name</name>
+                    <title>Product Title</title>
+                    <desc>Product Description</desc>
+                    <regular_price>Product Regular Price</regular_price>
+                    <final_price>Product Final Price</final_price>
+                    <slug>Product URL Key</slug>
+                    <rank>Product Rank</rank>
+                    <thumb_url>Product Thumb URL</thumb_url>
+                    <image_url>Product Image URL</image_url>
+                    <product_url>Product URL</product_url>
+                </attributes>
+                <routes>
+                    <product_ids_route>
+                        <route>/product_ids/:cat_id</route>
+                        <action_type>collection</action_type>
+                    </product_ids_route>
+                </routes>
+                <versions>1</versions>
+            </product_ids>
+            <product translate="title" module="Maxxsol_ExtendAPI">
+                <group>catalog</group>
+                <model>maxxsol_extendapi_models/catalog_product</model>
+                <title>Product</title>
+                <sort_order>10</sort_order>
+                <privileges>
+                    <guest>
+                        <retrieve>1</retrieve>
+                        <!--  <create>1</create>
+                        <update>1</update>
+                        <delete>1</delete>  --> 
+                    </guest>
+                </privileges>
+                <attributes>
+                    <entity_id>Product Id</entity_id>
+                    <name>Product Name</name>
+                    <title>Product Title</title>
+                    <regular_price>Product Regular Price</regular_price>
+                    <final_price>Product Final Price</final_price>
+                    <slug>Product URL Key</slug>
+                    <rank>Product Rank</rank>
+                    <thumb_url>Product Thumb URL</thumb_url>
+                    <image_url>Product Image URL</image_url>
+                    <product_url>Product URL</product_url>
+                </attributes>
+                <routes>
+                    <product_route>
+                        <route>/product/:prod_id</route>
+                        <action_type>entity</action_type>
+                    </product_route>
+                </routes>
+                <versions>1</versions>
+            </product>
+            <product_thumbs translate="title" module="Maxxsol_ExtendAPI">
+                <group>catalog</group>
+                <model>maxxsol_extendapi_models/catalog_product_productthumbs</model>
+                <title>Product Gallery Images</title>
+                <sort_order>10</sort_order>
+                <privileges>
+                    <guest>
+                        <retrieve>1</retrieve>
+                        <!--  <create>1</create>
+                        <update>1</update>
+                        <delete>1</delete>  --> 
+                    </guest>
+                </privileges>
+                <attributes>
+                    <id>Thumb id</id>
+                    <original_image>Original Image</original_image>
+                    <thumb_url>Thumb Url</thumb_url>
+                </attributes>
+                <routes>
+                    <product_thumbs_route>
+                        <route>/products/:prod_id/gallery_images</route>
+                        <action_type>collection</action_type>
+                    </product_thumbs_route>
+                </routes>
+                <versions>1</versions>
+            </product_thumbs>
+            <static-block translate="title" module="Maxxsol_ExtendAPI">
+                <group>cms</group>
+                <model>maxxsol_extendapi_models/cms_block</model>
+                <title>Static Block</title>
+                <sort_order>13</sort_order>
+                <privileges>
+                    <guest>
+                        <retrieve>1</retrieve>
+                        <!--  <create>1</create>
+                        <update>1</update>
+                        <delete>1</delete>  --> 
+                    </guest>
+                </privileges>
+                <attributes>
+                    <id>Block ID</id>
+                    <html>HTML</html>
+                </attributes>
+                <routes>
+                    <block_route>
+                        <route>/cms/static-block/:block_id</route>
+                        <action_type>collection</action_type>
+                    </block_route>
+                </routes>
+                <versions>1</versions>
+            </static-block>
+            <toplinks translate="title" module="Maxxsol_ExtendAPI">
+                <group>page</group>
+                <model>maxxsol_extendapi_models/page_toplinks</model>
+                <title>TopLinks</title>
+                <privileges>
+                    <guest>
+                        <retrieve>1</retrieve>
+                        <!--  <create>1</create>
+                        <update>1</update>
+                        <delete>1</delete>  --> 
+                    </guest>
+                </privileges>
+                <attributes>
+                    <title>Link title</title>
+                    <address>Link Address</address>
+                </attributes>
+                <routes>
+                    <toplinks_route>
+                        <route>/page/toplinks</route>
+                        <action_type>collection</action_type>
+                    </toplinks_route>
+                </routes>
+                <versions>1</versions>
+            </toplinks>
+            <block-html translate="title" module="Maxxsol_ExtendAPI">
+                <group>page</group>
+                <model>maxxsol_extendapi_models/page_html_block</model>
+                <title>Block Html</title>
+                <privileges>
+                    <guest>
+                        <retrieve>1</retrieve>
+                        <!--  <create>1</create>
+                        <update>1</update>
+                        <delete>1</delete>  --> 
+                    </guest>
+                </privileges>
+                <attributes>
+                    <html>Html</html>
+                </attributes>
+                <routes>
+                    <toplinks_route>
+                        <route>/page/html/block/:blockName</route>
+                        <action_type>entity</action_type>
+                    </toplinks_route>
+                </routes>
+                <versions>1</versions>
+            </block-html>
+            <categories translate="title" module="Maxxsol_ExtendAPI">
+                <group>catalog</group>
+                <model>maxxsol_extendapi_models/catalog_category</model>
+                <title>Categories</title>
+                <sort_order>11</sort_order>
+                <privileges>
+                    <guest>
+                        <retrieve>1</retrieve>
+                        <!--  <create>1</create>
+                        <update>1</update>
+                        <delete>1</delete>  --> 
+                    </guest>
+                </privileges>
+                <attributes>
+                    <id>Category ID</id>
+                    <name>Name</name>
+                    <slug>Slug</slug>
+                    <blockId>Block Id</blockId>
+                    <children>Children</children>
+                </attributes>
+                <routes>
+                    <categories_route>
+                        <route>/categories</route>
+                        <action_type>collection</action_type>
+                    </categories_route>
+                    <category_route>
+                        <route>/categories/:cat_id</route>
+                        <action_type>collection</action_type>
+                    </category_route>
+                </routes>
+                <versions>1</versions>
+            </categories>            
+            <tcprods translate="title" module="Maxxsol_ExtendAPI">
+                <group>catalog</group>
+                <model>maxxsol_extendapi_models/catalog_category_topcatsprods</model>
+                <title>Categories</title>
+                <sort_order>11</sort_order>
+                <privileges>
+                    <guest>
+                        <retrieve>1</retrieve>
+                        <!--  <create>1</create>
+                        <update>1</update>
+                        <delete>1</delete>  --> 
+                    </guest>
+                </privileges>
+                <attributes>
+                    <id>Category ID</id>
+                    <name>Name</name>
+                    <slug>Slug</slug>
+                    <blockId>Block Id</blockId>
+                    <products>Children</products>
+                </attributes>
+                <routes>
+                    <tcprods>
+                        <route>/tcprods</route>
+                        <action_type>collection</action_type>
+                    </tcprods>
+                </routes>
+                <versions>1</versions>
+            </tcprods>            
+            <product-attributes translate="title" module="Maxxsol_ExtendAPI">
+                <group>catalog</group>
+                <model>maxxsol_extendapi_models/catalog_product_productattributes</model>
+                <title>Product Attributes</title>
+                <sort_order>9</sort_order>
+                <info translate="title" module="Maxxsol_ExtendAPI">
+                    <title>Retrieve product attributes</title>
+                </info>
+                <privileges>
+                    <guest>
+                        <retrieve>1</retrieve>
+                        <!--  <create>1</create>
+                        <update>1</update>
+                        <delete>1</delete>  --> 
+                    </guest>
+                </privileges>
+                <attributes>
+                    <code>Code</code>
+                    <title>Title</title>
+                    <content>Content</content>
+                </attributes>
+                <routes>
+                    <product-attributes-route>
+                        <route>/products/attributes/:prod_id</route>
+                        <action_type>collection</action_type>
+                    </product-attributes-route>
+                </routes>
+                <versions>1</versions>
+            </product-attributes>
+            <checkout_cart translate="title" module="Maxxsol_ExtendAPI">
+                <group>checkout</group>
+                <model>maxxsol_extendapi_models/checkout_cart_product</model>
+                <title>Cart</title>
+                <sort_order>9</sort_order>
+                <info translate="title" module="Maxxsol_ExtendAPI">
+                    <title>Add, Update and Delete products from cart</title>
+                </info>
+                <privileges>
+                    <guest>
+                        <retrieve>1</retrieve>
+                        <create>1</create>
+                        <update>1</update>
+                        <delete>1</delete>   
+                    </guest>
+                </privileges>
+                <attributes>
+                    <entity_id>Product Id</entity_id>
+                    <options>Product Options</options>
+                    <qty>Product Quantity</qty>
+                </attributes>
+                <routes>
+                    <add-route>
+                        <route>/checkout/carts</route>
+                        <action_type>collection</action_type>
+                    </add-route>
+                    <update-delete-route>
+                        <route>/checkout/cart</route>
+                        <action_type>entity</action_type>
+                    </update-delete-route>
+                    <details_route>
+                        <route>/checkout/cartcount</route>
+                        <action_type>collection</action_type>
+                    </details_route>
+                </routes>
+                <versions>1</versions>
+            </checkout_cart>
+        </resources>
+    </api2>
+</config>

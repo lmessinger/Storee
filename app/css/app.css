@@ -1,0 +1,240 @@
+@charset "utf-8";
+@import url("animate.css");
+@import url("st-accordion.css");
+@import url("product-details.css");
+@import url("product-full-list.css");
+@import url("product-full.css");
+@import url("ajax-loader.css");
+@import url("category-thumb-list.css");
+@import url("product-thumb-list.css");
+@import url("category-list.css");
+@import url("static-block.css");
+@import url("product-title.css");
+
+/* app css stylesheet */
+
+body { background: #fff; overflow-x: hidden}
+
+body.catalog-page .headerright .header-info, body.catalog-page .headerright hr { opacity: 0}
+body.catalog-page .headerright .header-info, body.catalog-page .headerright hr {
+    -webkit-transition:all 1s ease-in-out;
+    -moz-transition:all 1s ease-in-out;
+    -o-transition:all 1s ease-in-out;
+    transition:all 1s ease-in-out;
+}
+body.pdp-page .headerright .header-info, body.pdp-page .headerright hr {
+    -webkit-transition:all 1s ease-in-out;
+    -moz-transition:all 1s ease-in-out;
+    -o-transition:all 1s ease-in-out;
+    transition:all 2s 1s ease-in-out;
+}
+body.pdp-page .headerright .header-info, body.pdp-page .headerright hr {
+    opacity: 1;
+}
+
+/*only for chrome, force a scroll in the PDP to prevent jitter */
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+        body.pdp-page {
+        overflow-y: scroll;
+    }
+}
+
+.st-container {
+    min-height: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    /*z-index: 99;*/
+    position: absolute;
+    padding-bottom: 10%;
+}
+
+.row { width: auto !important;}
+
+.st-content-row {
+    margin-top: 20px;
+    min-height: 500px;
+}
+
+.st-header { position: relative; z-index: 70}
+
+.navbar { background: none !important; border: none; box-shadow: none;}
+
+.sidenav {
+    margin-top: 20px;
+    display: block;
+}
+
+.info-details {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: Arial;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+a.info-details:hover {
+    color: #fff;
+}
+
+.ajax-loader{
+    background: url('../img/ajax-loader.gif') no-repeat center center transparent;
+    position: fixed;
+    z-index: -999;
+    height: 100%;
+    width: 100%;
+}
+
+.products{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.products li { float: left; position: relative; min-height: 100%; min-width: 100%}
+.products li img { margin: auto}
+
+
+.product_full_list ul.products{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-background {
+    background: #262626;
+    height: 100%;
+    opacity: 0.7;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    z-index: -999;
+}
+
+.sidenav li a{
+    padding: 3px 20px;
+    color: #AAAAAA;
+    text-transform: uppercase;
+}
+
+.sidenav li a:hover{
+    color: #262626;
+    font-weight: bold
+}
+
+.page-overlay
+{
+    height:100%;
+    width:100%;
+    position:fixed;
+    left:0;
+    top:0;
+    z-index: 70 !important;
+    background-color:black;
+    filter: alpha(opacity=75); /* internet explorer */
+    -khtml-opacity: 0.75;      /* khtml, old safari */
+    -moz-opacity: 0.75;       /* mozilla, netscape */
+    opacity: 0.75;           /* fx, safari, opera */
+}
+
+#st-instagram-icon {position: absolute; right: 10px; bottom: 15px; z-index: 70}
+.st-layout { position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+
+@media only screen and (min-width : 0px) and (max-width : 479px) {
+    .st-container { padding-bottom: 30%;}
+}
+
+@media only screen and (min-width: 0px) and (max-width: 679px) {
+
+    .navbar-brand{width: 40%}
+    .navbar-collapse { overflow: hidden}
+
+    /*animations*/
+    .navbar-collapse.ng-hide{ display: block !important}
+
+    .navbar-collapse.ng-hide-add, .navbar-collapse.ng-hide-remove{
+        -webkit-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s;
+        transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s;
+        display: block !important;
+    }
+
+    .navbar-collapse.ng-hide { height: 0; line-height: 0; opacity: 0; }
+    .navbar-collapse.ng-hide-add { height: 100%; line-height: .75; }
+    .navbar-collapse.ng-hide-add-active { height: 0; line-height: 0; opacity: 0;}
+
+    .navbar-collapse.ng-hide-remove { height: 0; line-height: 0; }
+    .navbar-collapse.ng-hide-remove-active { height: 100%; line-height: .75;}
+
+}
+
+/*.st-category-menu { 
+    z-index: 70;
+    position: absolute;
+    
+}*/
+
+footer { position: absolute; min-width: 100%; bottom: 0}
+.footer ul.links {width: 100% !important}
+
+.ui-view-container {
+    position: relative;
+}
+
+.st-ui-pdp-page.ng-leave, footer.ng-hide-add{
+    display: block !important;
+    -webkit-animation: slideOutRight .75s both ease-in-out;
+    -moz-animation: slideOutRight .75s both ease-in-out;
+    animation: slideOutRight .75s both ease-in-out;
+}
+.st-ui-pdp-page.ng-enter, footer.ng-hide-remove{ 
+    -webkit-animation: slideInRight .75s both ease-in-out;
+    -moz-animation: slideInRight .75s both ease-in-out;
+    animation: slideInRight .75s both ease-in-out;
+}
+
+.st-ui-catalog-page.ng-leave, .st-ui-categoryThumbList.ng-leave{
+    top:0;
+    left: 0;
+    position: fixed;
+    min-height: 100%;
+    min-width: 100%;
+    -webkit-animation: slideOutLeft .75s both ease-in-out;
+    -moz-animation: slideOutLeft .75s both ease-in-out;
+    animation: slideOutLeft .75s both ease-in-out;
+}
+
+.st-ui-catalog-page.ng-enter, .st-ui-categoryThumbList.ng-enter{
+    top:0;
+    left: 0;
+    position: fixed;
+    min-height: 100%;
+    min-width: 100%;
+    -webkit-animation: slideInLeft .75s both ease-in-out;
+    -moz-animation: slideInLeft .75s both ease-in-out;
+    animation: slideInLeft .75s both ease-in-out;
+}
+
+.st-ui-catalog-page.ng-leave product-full-list{
+    top:0;
+    left: 0;
+    position: fixed;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.ng-enter .st-nav_left_ctrl_container, 
+.ng-enter .st-nav_right_ctrl_container,
+.ng-leave .st-nav_left_ctrl_container, 
+.ng-leave .st-nav_right_ctrl_container {
+    display: none;
+}
+
+.st-ui-catalog-page.ng-enter product-full-list{
+    top:0;
+    left: 0;
+    position: fixed;
+    min-height: 100%;
+    min-width: 100%;
+}
+

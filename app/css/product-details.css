@@ -1,0 +1,52 @@
+.st-product-details-title {font-family: 'Verdana'; font-size: 1.4em; text-align: left;}
+product-details .st-product-full-title {display: none;}
+product-details .st-product-details-price { font-family: 'Times New Roman' ;text-align: left; font-size: 1.2em; font-weight: normal}
+product-details div.st-product-details-main-img-frame {position: absolute;width: 30%; height: 70%; z-index: 80; top: 12%; left: 30%}
+product-details .st-product-details-main-img { position: absolute; width: 100%; height: 100%; background-size: contain; background-position: initial; background-clip: initial; background-repeat: no-repeat;}
+
+product-details .st-pdp-overlay { position: fixed; width: 100%; height: 100%; left: 0; top: 0; z-index: 10000}
+
+product-details .st-container { padding-left: 0;position: relative; width: 100%; padding-bottom: 50px;}
+
+product-details .st-pdp-img{ max-height: 400px; margin-top: 20px; margin-bottom: 10px; display: inline-block}
+
+/*only for chrome, force a scroll in the PDP to set max-height */
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+        product-details .st-pdp-img{ max-height: 53%; margin-top: 20px; margin-bottom: 10px; display: inline-block}
+}
+
+/* all browsers see this, but only IE thinks #IEroot exists
+		as an element */
+
+
+@-moz-document url-prefix() { 
+  product-details .st-pdp-img{ max-height: 400px; margin-top: 20px; margin-bottom: 10px; display: inline-block}
+}
+
+product-details .st-img-loader {margin-top: 8px; margin-left: 8px;}
+
+product-details button.st-btn-add2bag { font-family: 'Times New Roman'; padding: 5px 0 5px 20px; min-width: 160px; text-align: center;position: relative;text-transform: uppercase}
+product-details button span.st-shopping-bag:before { content: url('../img/shopping-bag-icon.png'); padding-right: 4px; position: absolute; border-right: 1px solid #959595; display:inline-block; height: 26px; left: 0; top: 2.2px; padding-left: 2px}
+
+                product-details .st-accordion-title span { font-family: Times New Roman; font-size: 18px;}
+product-details st-accordion { position: relative;}
+
+//drag-up
+product-details .drag-up.ng-hide{ display: block !important}
+
+product-details .drag-up.ng-hide-add, product-details .drag-up.ng-hide-remove{
+    -webkit-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s;
+    transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s;
+    display: block !important;
+}
+
+product-details .drag-up.ng-hide{margin-top: 30%; opacity: 0}
+product-details .drag-up.ng-hide-add{margin-top: 30%; opacity: 0}
+product-details .drag-up.ng-hide-active{margin-top: 30%; opacity: 0}
+
+product-details .drag-up.ng-hide-remove{ margin-top: 30%; opacity: 0}
+product-details .drag-up.ng-hide-remove-active{ margin-top: 0; opacity: 1}
+
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+    product-details .st-pdp-img {max-width: 100%}
+}

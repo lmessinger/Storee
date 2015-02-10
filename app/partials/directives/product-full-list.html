@@ -1,0 +1,27 @@
+<!-- productFull slide -->
+<product-full 
+    show-ctrls="showCtrls" 
+    fit-to-size="fitToSize" 
+    class="{{getAnimClass()}}" 
+    ng-class="{active: product.entity_id == activeProdId}"
+    prod-id="product.entity_id" 
+    ng-show="product.entity_id == activeProdId" 
+    ng-repeat="product in productsBasicData" 
+    thumb-state="thumbState" offset="offset">
+</product-full>
+
+<!-- previous/next navigation for slides -->
+<div class="st-nav_left_ctrl_container" ng-show="hasProducts">
+    <a href="javascript:void(0);" class="glyphicon glyphicon-chevron-left" ng-click="prev_slide()"></a>
+</div>
+<div class="st-nav_right_ctrl_container" ng-show="hasProducts">
+    <a href="javascript:void(0);" class="glyphicon glyphicon-chevron-right" ng-click="next_slide()"></a>
+</div>
+
+<ajax-loader ng-show="loading" /> 
+
+<!-- Auto play toggle -->
+<!-- <button ng-show="autoPlay" 
+        ng-click="autoPlay = !autoPlay" 
+        ng-class="{yes: autoPlay}" 
+        class="st-product-full-list-auto-play-toggle" /> -->

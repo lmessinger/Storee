@@ -1,0 +1,26 @@
+
+<div role="complementary" ng-mouseenter="onMouseEnter($event)" ng-mouseleave="onMouseLeft($event)">
+
+    <div class="st_thumbs_title" >
+        <span> {{categoryName}} </span>
+    </div>
+    <div class="album" >
+        <div class="st_wrapper st_thumbs_wrapper clearfix" >
+
+            <div class="st_thumbs">
+                
+                <a ng-repeat="thumbnailItem in thumbnailsDatasource" ng-click="onThumbnailClick(thumbnailItem.entity_id);" href="javascript:void(0);" id="thumb_{{thumbnailsCatId}}_{{thumbnailItem.entity_id}}" >
+                   <img src="{{thumbnailItem.thumb_url}}" />
+               </a>
+
+            </div>
+        </div>
+        <a href="javascript:void(0)" class="nav_left" ng-mouseenter="onMouseEnter($event)" ng-mousedown="onMouseDownOnNavLeft($event)" ng-mouseup="onMouseUpOnLeftNav($event)" ng-mouseleave="onMouseLeftLeftNav($event)">
+            <span class="st-thumb-nav-bg"></span>
+        </a>
+        <a href="javascript:void(0)" class="nav_right" ng-mousedown="onMouseDownOnNavRight($event)" ng-mouseup="onMouseUpOnRightNav($event)" ng-mouseleave="onMouseLeftRightNav($event)">
+            <span class="st-thumb-nav-bg"></span>
+        </a>
+    </div>
+</div>
+       

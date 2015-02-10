@@ -1,0 +1,117 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 18, 2013, 5:34:35 PM
+    Author     : zahid
+*/
+
+/*
+.st_product_thumb{
+    
+}
+
+.st_product_thumb .st_wrapper{
+    width:50%;
+    overflow: hidden;
+    top:50px;
+    left:0px;
+    margin-left: 12%;
+    margin-right: 12%;
+}
+*/
+
+.st_product_thumb .st_thumbs_title {
+    background-color: black;
+    opacity: 1.0;
+    width: 100%;
+}
+
+.st_product_thumb .st_thumbs_title span{
+    margin-left: 15px;
+    background: #000;
+    color: #BAB7B0;
+    text-transform: uppercase;
+    text-align: left;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.st_product_thumb .st_thumbs{
+    margin: 0 auto;
+    /*
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    */
+}
+
+.st_product_thumb .st_thumbs a {
+    float: left; 
+    margin:3px;  
+}
+
+.st_product_thumb .st_thumbs img{
+    border:none;
+    opacity:0.5;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+}
+
+.st_product_thumb .st_thumbs img:hover{
+    border:none;
+    opacity:1;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+}
+
+.st_product_thumb .st_thumbs_active{
+
+    margin: 0;
+    float: left;
+}
+
+.st_product_thumb .st_thumbs_active img{
+    border:none;
+    opacity:1;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+}
+
+.st_product_thumb .album {
+    opacity: 0.7;
+    position: relative;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+}
+
+.st_product_thumb .nav_left,.st_product_thumb .nav_right {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    text-decoration: none;
+    color: #fff;
+    line-height: 100%;
+    z-index: 110;
+    display: none;
+}
+
+
+.st_product_thumb:hover .nav_left,.st_product_thumb:hover .nav_right {
+    display: inline;
+}
+
+.st_product_thumb .nav_left {
+    background: url('../img/left-arrow.png') no-repeat center;
+    left:-30px;
+}
+
+.st_product_thumb .nav_left .st-thumb-nav-bg,.st_product_thumb .nav_right .st-thumb-nav-bg{
+    
+    width: 30px;
+    height: 100%;
+    opacity: 0.5;
+    display: block;
+}
+
+.st_product_thumb .nav_right {
+    background: url('../img/right-arrow.png') no-repeat center;
+    right: -30px;
+}

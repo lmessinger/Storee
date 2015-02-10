@@ -1,0 +1,38 @@
+product-full {
+    min-height: 100%;
+    left: 0;
+    overflow: hidden;
+    /*position: absolute;*/
+    display: block;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.st-fitToSize {
+    background-size:contain;
+}
+
+
+.st-dontFitToSize {
+    background-size:cover;
+    background-attachment:fixed;
+    background-position: top;
+}
+
+.st-product-full-img {
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: #fff;
+}
+
+.st-buynow-button {position: absolute; bottom: 10px; left: 10px; z-index: 50}

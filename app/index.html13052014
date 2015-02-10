@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" ng-app="st.app">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <title ng:bind-template="Maya Meirav : {{pageTitle}}">Maya Meirav</title>
+        <link rel="icon" href="favicon.ico">
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/bootstrap-theme.css"/>
+        <link rel="stylesheet" href="css/app.css"/>
+        <link rel="stylesheet" href="/magento/skin/frontend/default/mobileshoppe/css/styles.css"/>
+    </head>
+    <body ng-controller="MainCtrl" class="{{bodyClass}}" ng-mousemove="onMouseMove()">
+
+        <div class="st-container">
+            <!-- header -->
+            <div class="row">
+                  <storee-header></storee-header>
+            </div>
+             <!--<div class="st-header" ng-bind-html="headerHtml">-->
+            <!--category list-->
+            <div class="row st-content-row">
+                <div class="col-md-2">
+<!--                    <div role="complementary" class="sidebar hidden-print st-category-menu">
+                        <categorylist root-cat="3" block-id="blockId" selected-category="currentCategory"></categorylist>
+                        XXXX
+                    </div>-->
+                       
+                </div>
+                <div class="col-md-10">
+                    <!--modal dialog area-->
+                    <static-block class="col-md-8" block-id="blockId" ></static-block>
+                     <!--ui-view (catalog pages, pdp)-->   
+                    <div class="st-ui-content" ng-class="{'st-ui-catalog-page': ($state.current.name != 'productDetails'),'st-ui-pdp-page': ($state.current.name == 'productDetails')}" ui-view="contentView"></div>
+                </div>
+            </div>
+            <footer ng-show="showFooter" ng-bind-html="footerHtml"></footer>
+        </div>
+        <!--thumb list-->
+        <div class="st-ui-categoryThumbList" ui-view="categoryThumbList"></div>
+
+        <script type="text/javascript" src="lib/jquery/jquery-2.1.0.min.js"></script>
+        <script type="text/javascript" src="lib/jquery/elevateZoom/jquery.elevateZoom-3.0.8.min.js"></script>
+        <script type="text/javascript" src="lib/angular/angular.js"></script>
+        <script type="text/javascript" src="lib/angular/angular-animate.js"></script>
+        <script type="text/javascript" src="lib/angular/angular-sanitize.js"></script>
+        <script type="text/javascript" src="lib/ui-router/angular-ui-router.min.js"></script>
+        <script type="text/javascript" src="lib/ui-bootstrap/ui-bootstrap-tpls-0.9.0.min.js"></script>
+        <script type="text/javascript" src="js/module.js"></script>
+        <script type="text/javascript" src="env/dev.js"></script>
+        <script type="text/javascript" src="js/models/CartModel.js"></script>
+        <script type="text/javascript" src="js/models/ContentModel.js"></script>
+        <script type="text/javascript" src="js/models/CategoryModel.js"></script>
+        <script type="text/javascript" src="js/models/ProductModel.js"></script>
+        <script type="text/javascript" src="js/services/ProductsService.js"></script>
+        <script type="text/javascript" src="js/controllers/AjaxLoaderCtrl.js"></script>
+        <script type="text/javascript" src="js/controllers/CategoryListController.js"></script>
+        <script type="text/javascript" src="js/controllers/StaticBlockController.js"></script>
+        <script type="text/javascript" src="js/controllers/ProductFullListController.js"></script>
+        <script type="text/javascript" src="js/controllers/ProductFullController.js"></script>
+        <script type="text/javascript" src="js/controllers/ProductDetailsCtrl.js"></script>
+        <script type="text/javascript" src="js/controllers/AccordionCtrl.js"></script>
+        <script type="text/javascript" src="js/controllers/MainController.js"></script>
+        <script type="text/javascript" src="js/controllers/ProductOptionCtrl.js"></script>
+        <script type="text/javascript" src="js/controllers/CategoryThumbListController.js"></script>
+        <script type="text/javascript" src="js/controllers/ProductThumbListController.js"></script>
+        <script type="text/javascript" src="js/controllers/GeneralThumbListController.js"></script>
+        <script type="text/javascript" src="js/controllers/ProductTitleController.js"></script>
+        <script type="text/javascript" src="js/controllers/CartIconController.js"></script>
+        <script type="text/javascript" src="js/controllers/DynamicBlockController.js"></script>
+        <script type="text/javascript" src="js/controllers/HeaderController.js"></script>
+        <script type="text/javascript" src="js/routingstates.js"></script>
+
+        <script type="text/javascript" src="js/directives.js"></script>
+        <!--this jsonp file is pre-rendered on the server, using grunt, to speed up loading-->
+        <script>var jsonPData;</script>
+        <!--<script type="text/javascript" src="snapshots/data.jsonp"></script>-->
+ 
+    </body>
+</html>

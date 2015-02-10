@@ -1,0 +1,95 @@
+product-full-list { z-index: 1; position: absolute; top: 0; left: 0; height: 100%; width: 100%}
+#product-full-list-last-image{
+    position: fixed; 
+    z-index: 0; 
+    top: 0px; 
+    left: 0px; 
+    height: 100%; 
+    width: 100%;
+}
+
+.st-nav_left_ctrl_container,.st-nav_right_ctrl_container{
+    width: 70px;
+    height: 100%;
+    position: fixed;
+    z-index: 49;
+    top: 0;
+    text-align: center;
+    padding-right: 20px;
+}
+
+.st-nav_left_ctrl_container a,.st-nav_right_ctrl_container a{
+    cursor: pointer;
+    margin-top: -20px;
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    /*    margin-left: -10px;
+        width: 42px;
+        height: 42px;*/
+    text-decoration: none;
+    color: #000;
+}
+
+.st-nav_left_ctrl_container{
+    left: 0;
+}
+/*.st-nav_left_ctrl_container {
+    background: url('../img/back.png') no-repeat center;
+}
+.st-nav_right_ctrl_container {
+    background: url('../img/forward.png') no-repeat center;
+}*/
+.st-nav_right_ctrl_container{
+    right: 0;
+}
+
+.st-product-full-list-auto-play-toggle { position: absolute; top: 10px; right: 10px; z-index: 70; background: url('../img/play.png') no-repeat }
+.st-product-full-list-auto-play-toggle.yes { background: url('../img/pause.png') no-repeat}
+
+product-full-list product-full { display: none; position: fixed}
+product-full-list product-full.active { display: block !important;}
+
+product-full-list .anim-fade {opacity: 1}
+product-full-list .anim-fade.ng-hide{ opacity: 0}
+
+product-full-list .anim-fade.ng-hide-add {
+    display: block !important;
+    -webkit-animation: fadeOut 0.5s both linear;
+    -moz-animation: fadeOut 0.5s both linear;
+    animation: fadeOut 0.5s both linear;
+}
+
+product-full-list .anim-fade.ng-hide-remove {
+    display: block !important;
+    -webkit-animation: fadeIn 0.5s both linear;
+    -moz-animation: fadeIn 0.5s both linear;
+    animation: fadeIn 0.5s both linear;
+}
+
+product-full-list .anim-slide-next.ng-hide-add {
+    display: block !important;
+    -webkit-animation: slideOutLeft 0.5s both linear;
+    -moz-animation: slideOutLeft 0.5s both linear;
+    animation: slideOutLeft 0.5s both linear;
+}
+
+product-full-list .anim-slide-next.ng-hide-remove {
+    display: block !important;
+    -webkit-animation: slideInRight 0.5s both linear;
+    -moz-animation: slideInRight 0.5s both linear;
+    animation: slideInRight 0.5s both linear;
+}
+
+product-full-list .anim-slide-prev.ng-hide-add {
+    display: block !important;
+    -webkit-animation: slideOutRight 0.5s both linear;
+    -moz-animation: slideOutRight 0.5s both linear;
+    animation: slideOutRight 0.5s both linear;
+}
+
+product-full-list .anim-slide-prev.ng-hide-remove {
+    -webkit-animation: slideInLeft 0.5s both linear;
+    -moz-animation: slideInLeft 0.5s both linear;
+    animation: slideInLeft 0.5s both linear;
+}

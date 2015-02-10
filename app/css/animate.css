@@ -1,0 +1,99 @@
+/* ANIMATIONS
+============================================================================= */
+
+/* leaving animations ----------------------------------------- */
+@keyframes slideOutLeft {
+    to 		{ transform: translateX(-100%); }
+}
+
+@keyframes slideOutRight {
+    to 		{ transform: translateX(100%); }
+}
+
+/* entering animations --------------------------------------- */
+@keyframes slideInRight {
+    from 	{ transform:translateX(100%); }
+    to 		{ transform: translateX(0); }
+}
+
+@keyframes slideInLeft {
+    from 	{ transform:translateX(-100%); }
+    to 		{ transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+    from 	{ opacity: 0; }
+    to 		{ opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from 	{ opacity: 1; }
+    to 		{ opacity: 0; }
+}
+
+/******************/
+/*Webkit keyframes*/
+/******************/
+
+/* leaving animations ----------------------------------------- */
+@-webkit-keyframes slideOutLeft {
+    to 		{ -webkit-transform: translateX(-100%); }
+}
+
+@-webkit-keyframes slideOutRight {
+    to 		{ -webkit-transform: translateX(100%); }
+}
+
+/* entering animations --------------------------------------- */
+@-webkit-keyframes slideInRight {
+    from 	{ -webkit-transform:translateX(100%); }
+    to 		{ -webkit-transform: translateX(0); }
+}
+
+@-webkit-keyframes slideInLeft {
+    from 	{ -webkit-transform:translateX(-100%); }
+    to 		{ -webkit-transform: translateX(0); }
+}
+
+@-webkit-keyframes fadeIn {
+    from 	{ opacity: 0; }
+    to 		{ opacity: 1; }
+}
+
+@-webkit-keyframes fadeOut {
+    from 	{ opacity: 1; }
+    to 		{ opacity: 0; }
+}
+/******************************/
+/*Mozilla keyframes definition*/
+/******************************/
+
+/* leaving animations ----------------------------------------- */
+@-moz-keyframes slideOutLeft {
+    to 		{ -moz-transform: translateX(-100%); }
+}
+
+@-moz-keyframes slideOutRight {
+    to 		{ -moz-transform: translateX(100%); }
+}
+
+/* entering animations --------------------------------------- */
+@-moz-keyframes slideInRight {
+    from 	{ -moz-transform:translateX(100%); }
+    to 		{ -moz-transform: translateX(0); }
+}
+
+@-moz-keyframes slideInLeft {
+    from 	{ -moz-transform:translateX(-100%); }
+    to 		{ -moz-transform: translateX(0); }
+}
+
+@-moz-keyframes fadeIn {
+    from 	{ opacity: 0; }
+    to 		{ opacity: 1; }
+}
+
+@-moz-keyframes fadeOut {
+    from 	{ opacity: 1; }
+    to 		{ opacity: 0; }
+}

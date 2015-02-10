@@ -1,0 +1,25 @@
+
+.st-static-block-overlay {
+    height:100%;
+    width:100%;
+    position:fixed;
+    left:0;
+    top:0;
+    z-index: 70 !important;
+    background-color:black;
+    opacity: 0.75;
+}
+.st-static-block-overlay.ng-hide-add, .st-static-block-overlay.ng-hide-remove {
+    transition: 0.3s linear;
+    display: block!important;
+}
+
+.st-static-block-overlay.ng-hide { opacity: 0 }
+.st-static-block-overlay.ng-hide-add { opacity: 0.75 }
+.st-static-block-overlay.ng-hide-add.ng-hide-add-active { opacity: 0;}
+
+.st-static-block-overlay.ng-hide-remove { opacity: 0 }
+.st-static-block-overlay.ng-hide-remove.ng-hide-remove-active { opacity: 0.75}
+
+.st-static-block-content { color: #fff; background: #131313; 
+                          border-style:solid; border-color:white; border-width:5px; border-radius: 3px; padding: 25px; z-index: 72; position: relative }

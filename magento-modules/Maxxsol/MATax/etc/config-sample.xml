@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<global> <!-- this node can be <frontend> or <adminhtml> -->
+    <events>
+        <event_code> <!-- replace event_name with an event identifier, e.g. sales_order_place_after -->
+            <observers>
+                <your_observer_node_name> <!-- a custom identifier for your observer configuration -->
+                    <class>yourpackage_yourmodule/observer</class> <!-- a pointer to your observer model -->
+                    <method>yourObserverFunctionName</method> <!-- name of the function in your observer class -->
+                    <type>singleton</type> <!-- optional node defining how the observer class is instantiated -->
+                </your_observer_node_name>
+            </observers>
+        </event_code>
+    </events>
+</global>

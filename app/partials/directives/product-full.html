@@ -1,0 +1,12 @@
+<div ng-if="product.image_url" 
+     class="st-product-full-img" 
+     ng-class="fitToSizeClass()" 
+     bg-img="{{product.image_url}}" 
+     ng-mousemove="onMouseMove($event)">
+</div>
+<product-title class="st-product-full-title" 
+               ng-show="showDescription" 
+               product="product" 
+               thumb-state="thumbState" 
+               offset="offset">
+</product-title>

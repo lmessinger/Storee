@@ -1,0 +1,13 @@
+ <a href="javascript:void(0);" 
+   ng-click="showCategories = !showCategories" 
+   ng-class="{expand: showCategories == false}" 
+   class="expand st-category_toggle"></a>
+
+<ul class="nav st-categories" ng-show="showCategories">
+    <li ng-repeat="category in categories" 
+        ng-click="selectCategory(category)" 
+        ng-class="{active: (category.id == selectedCategory.id)}">
+        
+        <a href="{{category.href}}" >{{category.name}}</a>
+    </li>
+</ul>

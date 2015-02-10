@@ -1,0 +1,8 @@
+<accordion close-others="oneAtATime">
+    <accordion-group ng-repeat="group in accordionGroups" is-open="$index==0">
+        <accordion-heading>
+           {{group.title}} <i class="pull-right glyphicon st-arrow-down"></i>
+        </accordion-heading>
+        <div ng-bind-html="group.content"></div>
+    </accordion-group>
+</accordion>

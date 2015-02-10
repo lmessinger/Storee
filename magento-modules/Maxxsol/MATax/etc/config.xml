@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Maxxsol_MATax>
+            <version>0.1.0</version>
+        </Maxxsol_MATax>
+    </modules>
+    <global>
+        <models>
+            <matax>
+                <class>Maxxsol_MATax_Model</class>
+            </matax>
+            <tax>
+                <rewrite>
+                    <calculation>Maxxsol_MATax_Model_Tax_Calculation</calculation>
+                </rewrite>
+            </tax>
+        </models>
+        <helpers>
+            <matax>
+                <class>Maxxsol_MATax_Helper</class>
+            </matax>
+            <tax>
+                <rewrite>
+                    <data>Maxxsol_MATax_Helper_Tax_Data</data>
+                </rewrite>
+            </tax>
+        </helpers>
+    </global>
+</config>

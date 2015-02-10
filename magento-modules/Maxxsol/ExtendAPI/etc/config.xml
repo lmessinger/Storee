@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Maxxsol_ExtendAPI>
+            <version>0.1.0</version>
+        </Maxxsol_ExtendAPI>
+    </modules>
+    <global>
+        <models>
+            <maxxsol_extendapi_models>
+                <class>Maxxsol_ExtendAPI_Model</class>
+            </maxxsol_extendapi_models>
+        </models>
+    </global>
+</config>

@@ -1,0 +1,28 @@
+.st-product-full-title { position: absolute; bottom: 25%; right: 7%; color: #000;}
+
+.st-product-full-title a { text-decoration: none; color: inherit; text-transform: capitilize; color: #000; }
+.st-product-full-title a:hover { text-decoration:underline; color: #d90202; }
+.st-product-full-title a:focus { outline:0; color: #d90202; }
+
+product-title {
+    -webkit-transition:all 0.5s 1s linear;
+    -moz-transition:all 0.5s 1s linear;
+    -o-transition:all 0.5s 1s linear;
+    transition:all 0.5s 1s linear;
+}
+
+.st-product-full-title.ng-hide-add, st-product-full-title.ng-hide-remove {
+    -webkit-transition:all 0.5s ease-in-out;
+    -moz-transition:all 0.5s ease-in-out;
+    -o-transition:all 0.5s ease-in-out;
+    transition:all 0.5s ease-in-out;
+    
+    display: block !important;
+}
+
+.st-product-full-title.ng-hide { opacity: 0;}
+.st-product-full-title.ng-hide-add { opacity: 1; }
+.st-product-full-title.ng-hide-add.ng-hide-add-active { opacity: 0;}
+
+.st-product-full-title.ng-hide-remove { opacity: 0; }
+.st-product-full-title.ng-hide-remove.ng-hide-remove-active { opacity: 1}

@@ -1,0 +1,38 @@
+<div ng-if="addingProduct" class="st-pdp-overlay"></div>
+<div class="st-container">
+    <div>
+        <div class="col-md-9" style="text-align: center">
+            <img ng-elevate-zoom class="img-responsive st-pdp-img" ng-src="{{main_img}}" zoom-image="{{main_img}}" />
+            <br />
+            <product-thumb-list 
+                bottom-offset="6%" 
+                cat-id="currentCategory.id" 
+                active-prod="product" 
+                selected-category="currentCategory" >
+            </product-thumb-list>
+        </div>
+        <div class="col-md-3">
+            <div class="drag-up" ng-show="!loading">
+                <h1 class="st-product-details-title">{{product.name}}</h1>
+                <h3 class="st-product-details-price" ng-bind-template="${{price}}"></h3>
+                <alert class="st-alert" ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
+                <product-option ng-repeat="option in product.options" option="option"></product-option>
+                <br /><br />
+                <button ng-if="addingProduct" ng-click="add2bag()" disabled="disabled" type="button" class="st-btn-add2bag btn btn-default">
+                    <span class="st-shopping-bag"></span>Add to Bag
+                </button>
+                <button ng-if="!addingProduct" ng-click="add2bag()" type="button" class="st-btn-add2bag btn btn-default">
+                    <span class="st-shopping-bag"></span>Add to Bag
+                </button>
+                <img class="st-img-loader" ng-show="addingProduct" ng-src="img/ajax-loader.gif" />
+                <br /><br />
+                <div class="st-accordion-title">
+                     <span>The Story:</span>
+                </div>
+                <st-accordion 
+                    attr-src="attributes" fields="['details_fld','size_fit_fld','look_fld']">
+                </st-accordion>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+st-accordion * { font-family: 'Times New Roman'}
+st-accordion accordion .panel { background: none !important; border-right: 0 !important; border-left: 0 !important; border-top: 0 !important; box-shadow: none !important; border-radius: 0 !important}
+st-accordion accordion .panel-heading { background: none !important; border: none !important; padding-left: 0; padding-right: 0;}
+st-accordion accordion .panel-title { font-size: 1em !important;}
+st-accordion accordion .panel-body { background: none !important; padding: 10px 0; font-size: 1.2em}
+st-accordion accordion .accordion-toggle {text-decoration: none; cursor: pointer}
+st-accordion .st-arrow-down:before { content: url('../img/arrow-down.png') }

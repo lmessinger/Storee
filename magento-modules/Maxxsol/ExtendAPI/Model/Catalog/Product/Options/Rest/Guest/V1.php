@@ -1,0 +1,5 @@
+<?php
+
+class Maxxsol_ExtendAPI_Model_Catalog_Product_Options_Rest_Guest_V1 extends Maxxsol_ExtendAPI_Model_Catalog_Product_Options {
+
+}
