@@ -11,3 +11,6 @@ Storee is a project that builds a responsive AngularJs layer and runs it above a
 - Infrastructure for client-side product caching
 - Magento RESTful APIs
 
+## Demo
+See here: http://www.mayameirav.com
+
